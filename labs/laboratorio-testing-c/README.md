@@ -351,19 +351,19 @@ _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 
 **P11** — ¿Qué diferencia hay entre un test unitario y uno de integración? ¿Cuál de los dos detectó primero el bug de `carrito_total`?
 
-> R:
+> R:  Diria que la diferencia entre un test unitario y un test de integracion es que el test unitario evalua un tramo especifico del codigo, mientras que el test de integracion evalua como todas las partes del codigo actuan en conjunto y si lo hacen de forma exisotsa. El primero que detecto el bug del carrito total fue el test unitario si mal no me equivoco.
 
 **P12** — El bug de capacidad en `carrito_agregar` causa un **buffer overflow**: se escribe más allá del array. ¿Por qué esto es peligroso en C pero no ocurriría en un lenguaje como Python o Java?
 
-> R:
+> R: El motivo por el cuál esto es grave en C pero no ocurre en lenguajes como Python o Java es debido a que, producto de ser lenguajes de alto nivel, poseen intérpretes que evitan que se toque la memoria física en caso de encontrar un error, mientras que C es un lenguaje muy eficiente que no posee un intérprete para asegurar que lo que el programador escribió sea correcto, sino que "confía plenamente en el programador".
 
 **P13** — En este laboratorio encontraste los bugs escribiendo tests. ¿Qué tiene de mejor este enfoque frente a mirar el código directamente?
 
-> R:
+> R: El escribir test individuales y de integracion en donde se evaluan secciones especificas del codigo y luego como estas secciones actuan en conjunto ayudan a encontrar errores mas facilmente, puesto que detectan en que sitio hubo un error o bug. Si solo se mirara el codigo, quiza se tardaria mucho mas tiempo en encontrar los errores en comparacion a hacer los tests.
 
 **P14** — El test `test_total_precio_unitario` (cantidad = 1) **pasó** a pesar del bug, mientras que `test_total_con_cantidad` (cantidad = 2) **falló**. ¿Por qué el primer test no detectó el bug?
 
-> R:
+> R: El primer testing no detecto el bug ya que en este solo se estaba evaluando el precio unitario del producto y no la cantidad, en donde se encontraba la cuenta erronea. En el test total con cantidad si se encontro el bug ya que en este si se debia utilizar la cantidad.
 
 ```
 BUG_EN_FUNCION_1=carrito_total
