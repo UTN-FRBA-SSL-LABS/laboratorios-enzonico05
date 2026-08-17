@@ -338,10 +338,10 @@ Las líneas con `#####` nunca se ejecutaron — no están cubiertas por los test
 
 **P10** — ¿Hay alguna línea de `carrito.c` con `#####`? ¿Cuál y por qué no se ejecutó?
 
-> R:
+> R: La linea de carrito.c con #### es la funcion para aplicar el descuento del carrito. Estimo que el motivo por el cual no se ejecuto es porque no lo evaluamos en ningun momento en los test_unitarios, y juzgando los test que cubrio este test de cobertura, solo evaluo los test unitarios.
 
 ```
-COBERTURA_COMPLETA=
+COBERTURA_COMPLETA=NO
 ```
 _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 
@@ -366,12 +366,12 @@ _(SI si todas las líneas están cubiertas, NO si hay alguna con #####)_
 > R:
 
 ```
-BUG_EN_FUNCION_1=
+BUG_EN_FUNCION_1=carrito_total
 ```
 _(nombre de la función con el primer bug)_
 
 ```
-BUG_EN_FUNCION_2=
+BUG_EN_FUNCION_2=carrito_agregar
 ```
 _(nombre de la función con el segundo bug)_
 
