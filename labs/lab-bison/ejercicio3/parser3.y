@@ -32,7 +32,7 @@ void yyerror(const char *msg) { fprintf(stderr, "Error: %s\n", msg); }
  %left '+' '-'
  %left '*' '/'
  %right POW
- %right UNIMUS
+ %right UMINUS
 
 
 %%
