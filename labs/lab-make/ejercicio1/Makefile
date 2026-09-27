@@ -24,12 +24,7 @@ $(PROGRAMA): suma.c
 # TODO 4: Completá el comando para eliminar el ejecutable
 #         Usá rm -f y la variable $(PROGRAMA)
 clean:
-	cd ejercicio1
-	make                   # compila suma.c y genera el ejecutable
-	echo "3 4" | ./suma    # → 3 + 4 = 7
-	echo "10 5" | ./suma   # → 10 + 5 = 15
-	make clean             # elimina suma
-	make clean             # segunda vez: no da error gracias al -f
+	rm -f $(PROGRAMA)
 
 
 .PHONY: all clean
